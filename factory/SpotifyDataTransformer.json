@@ -1,0 +1,9 @@
+{
+	"name": "SpotifyDataTransformer",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1485e846-133e-4a23-8041-38e36c3fef98",
+		"tenantId": "cb4ccde7-35c4-4c31-b8f9-f58f24695e12"
+	}
+}
