@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "SpotifyDataTransformer"
+		},
+		"SpotifyDataSource_password": {
+			"value": ""
+		},
+		"datalakemedallion_accountKey": {
+			"value": ""
+		},
+		"SpotifyDataSource_properties_typeProperties_server": {
+			"value": "azurexspotifyproject.database.windows.net"
+		},
+		"SpotifyDataSource_properties_typeProperties_database": {
+			"value": "azureprojectdbkhan"
+		},
+		"SpotifyDataSource_properties_typeProperties_userName": {
+			"value": "adminkhan"
+		},
+		"datalakemedallion_properties_typeProperties_url": {
+			"value": "https://spotifyazureproject.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
