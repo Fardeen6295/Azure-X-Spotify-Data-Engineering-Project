@@ -8,6 +8,11 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.loop_input",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "AzureSQLtoLake",
@@ -318,7 +323,38 @@
 		"parameters": {
 			"loop_input": {
 				"type": "array",
-				"defaultValue": "[ { \"schema\": \"dbo\", \"table\": \"DimUser\", \"cdc_col\", \"updated_at\", \"from_date\": \"\", }, { \"schema\": \"dbo\", \"table\": \"DimArtist\", \"cdc_col\", \"updated_at\", \"from_date\": \"\", }, { \"schema\": \"dbo\", \"table\": \"DimDate\", \"cdc_col\", \"updated_at\", \"from_date\": \"\", }, { \"schema\": \"dbo\", \"table\": \"DimTrack\", \"cdc_col\", \"updated_at\", \"from_date\": \"\", }, { \"schema\": \"dbo\", \"table\": \"FactStream\", \"cdc_col\", \"updated_at\", \"from_date\": \"\", } ]"
+				"defaultValue": [
+					{
+						"schema": "dbo",
+						"table": "DimUser",
+						"cdc_col": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimArtist",
+						"cdc_col": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimDate",
+						"cdc_col": "date",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimTrack",
+						"cdc_col": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "FactStream",
+						"cdc_col": "stream_timestamp",
+						"from_date": ""
+					}
+				]
 			}
 		},
 		"variables": {
